@@ -13,7 +13,8 @@ code {
 }
 
 .clients{
-  height: 250px;
+  height: 284.69px;
+  overflow-y: scroll;
 }
 
 button{
@@ -22,5 +23,13 @@ button{
 
 button:hover{
 background-color:#808080;
-transition: .5s;
+transition: 0.5s;
+}
+
+.margin-top{
+  margin-top: 110px;
+}
+
+.pointer{
+  cursor: pointer;
 }
