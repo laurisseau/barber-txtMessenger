@@ -2,12 +2,15 @@ import path from "path";
 import cors from "cors";
 import dotenv from "dotenv";
 import twilio from "twilio";
-
 import express from "express";
+
 
 const router = express.Router();
 
 dotenv.config({ path: "config.env" });
+
+
+
 const app = express();
 app.use(express.json());
 app.use("/", router);
@@ -32,7 +35,6 @@ app.get("*", (req, res) => {
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const twilioNumber = process.env.TWILIO_NUMBER;
-const twilioNumberSid = process.env.TWILIO_NUMBER_SID;
 
 router.post("/create-msg", async (req, res) => {
   try {
